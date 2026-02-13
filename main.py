@@ -133,8 +133,6 @@ async def afktime(ctx):
 # EXECUÇÃO
 # ==========================
 
-bot.run(TOKEN, log_handler=handler, log_level=logging.INFO)
-
 # gambiarra
 
 app = Flask(__name__)
@@ -151,3 +149,5 @@ def run_web():
 
 
 threading.Thread(target=run_web).start()
+
+bot.run(TOKEN, log_handler=handler, log_level=logging.INFO)
