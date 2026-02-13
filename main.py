@@ -4,8 +4,6 @@ from datetime import datetime, timedelta, UTC
 import logging
 from dotenv import load_dotenv
 import os
-import threading
-from flask import Flask
 
 # ==========================
 # CONFIGURAÇÃO INICIAL
@@ -132,19 +130,5 @@ async def afktime(ctx):
 # ==========================
 # EXECUÇÃO
 # ==========================
-
-# gambiarra
-
-# app = Flask(__name__)
-
-# @app.route("/")
-# def home():
-#     return "Bot is running"
-
-# def run_web():
-#     port = int(os.environ.get("PORT", 10000))
-#     app.run(host="0.0.0.0", port=port)
-
-# threading.Thread(target=run_web).start()
 
 bot.run(TOKEN, log_handler=handler, log_level=logging.INFO)
