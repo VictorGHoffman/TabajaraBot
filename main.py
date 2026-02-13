@@ -135,19 +135,16 @@ async def afktime(ctx):
 
 # gambiarra
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
+# @app.route("/")
+# def home():
+#     return "Bot is running"
 
-@app.route("/")
-def home():
-    return "Bot is running"
+# def run_web():
+#     port = int(os.environ.get("PORT", 10000))
+#     app.run(host="0.0.0.0", port=port)
 
-
-def run_web():
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
-
-
-threading.Thread(target=run_web).start()
+# threading.Thread(target=run_web).start()
 
 bot.run(TOKEN, log_handler=handler, log_level=logging.INFO)
