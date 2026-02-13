@@ -14,7 +14,12 @@ from typing import cast
 
 TOKEN = cast(str, os.getenv("DISCORD_TOKEN"))
 
-AFK_MINUTES = 1  # tempo limite de inatividade
+afk_env = os.getenv("AFK_MINUTES")
+
+if afk_env is None:
+    raise RuntimeError("AFK_MINUTES não definido no .env")
+
+AFK_MINUTES = int(afk_env)
 AFK_LIMIT = timedelta(minutes=AFK_MINUTES)
 
 # ==========================
