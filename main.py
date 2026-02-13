@@ -66,7 +66,7 @@ async def on_voice_state_update(member, before, after):
 
     # Se entrou ou alterou algo em canal de voz
     if after.channel:
-        last_activity[member.id] = datetime.utcnow()
+        last_activity[member.id] = datetime.now(UTC)
     else:
         # Saiu do canal
         last_activity.pop(member.id, None)
