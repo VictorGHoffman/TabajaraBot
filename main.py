@@ -14,7 +14,7 @@ from typing import cast
 
 TOKEN = cast(str, os.getenv("DISCORD_TOKEN"))
 
-AFK_MINUTES = 120  # tempo limite de inatividade
+AFK_MINUTES = 1  # tempo limite de inatividade
 AFK_LIMIT = timedelta(minutes=AFK_MINUTES)
 
 # ==========================
